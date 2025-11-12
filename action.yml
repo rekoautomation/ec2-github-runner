@@ -84,7 +84,19 @@ inputs:
     description: >-
       Specifies bash commands to run before the runner starts. It's useful for installing dependencies with apt-get, yum, dnf, etc.
     required: false
-
+  startup-quiet-period-seconds:
+    description: >-
+      Specifies the quiet period in seconds after the instance starts.
+      The runner will not be registered during this period.
+    required: false
+  startup-retry-interval-seconds:
+    description: >-
+      Specifies the retry interval in seconds to register the runner after the quiet period.
+    required: false
+  startup-timeout-minutes:
+    description: >-
+      Specifies the timeout in minutes to register the runner after the quiet period.
+    required: false
 outputs:
   label:
     description: >-

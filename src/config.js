@@ -18,6 +18,9 @@ class Config {
       runnerHomeDir: core.getInput('runner-home-dir'),
       awsKeyPairName: core.getInput('aws-key-pair-name'),
       preRunnerScript: core.getInput('pre-runner-script'),
+      startupQuietPeriodSeconds: core.getInput('startup-quiet-period-seconds'),
+      startupRetryIntervalSeconds: core.getInput('startup-retry-interval-seconds'),
+      startupTimeoutMinutes: core.getInput('startup-timeout-minutes'),
     };
 
     const tags = JSON.parse(core.getInput('aws-resource-tags'));
